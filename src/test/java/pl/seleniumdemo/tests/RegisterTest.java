@@ -9,8 +9,10 @@ public class RegisterTest extends BaseTest{
 
     @Test
     public void registerUserTest() {
+        int random = (int) (Math.random() * 1000);
+
         WebElement dashboardLink = new HomePage(driver).openMyaccountPage()
-                .registerUser("tester12@test.pl", "tester12@test.pl")
+                .registerUser("tester" + random + "@test.pl", "tester12@test.pl")
                 .getDashboardLink();
         Assert.assertEquals(dashboardLink.getText(), "Dashboard");
     }
