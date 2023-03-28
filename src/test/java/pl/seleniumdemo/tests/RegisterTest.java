@@ -9,10 +9,9 @@ public class RegisterTest extends BaseTest{
 
     @Test
     public void registerUserTest() {
-        WebElement entryTitle = new HomePage(driver).openMyaccountPage()
-                .registerUser("tester124@test.pl", "tester124@test.pl")
-                .getEntryTitle();
-        Assert.assertTrue(entryTitle.isDisplayed());
-        Assert.assertEquals(entryTitle.getText(), "My account");
+        WebElement dashboardLink = new HomePage(driver).openMyaccountPage()
+                .registerUser("tester12@test.pl", "tester12@test.pl")
+                .getDashboardLink();
+        Assert.assertEquals(dashboardLink.getText(), "Dashboard");
     }
 }
