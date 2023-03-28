@@ -21,7 +21,9 @@ public class LoginTest extends BaseTest{
     public void LoginInvalidData() {
         WebElement error = new HomePage(driver)
                 .openMyaccountPage()
-                .logInInvalidData("test@test.pl", "abc").getError();
+                .logInInvalidData("test@test.pl", "abc")
+                .getError();
+
         Assert.assertTrue(error.getText().contains(" Incorrect username or password."), "Expected error doesn't match");
     }
 }
