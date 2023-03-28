@@ -13,17 +13,17 @@ public class CheckoutTest extends BaseTest{
     public void checkoutTest() {
 
         Customer customer = new Customer();
-        customer.setFirstName("Ferdek");
-        customer.setLastName("Kiepski");
-        customer.setCompanyName("Bezrobotny");
-        customer.setCountrySelect("Poland");
-        customer.setStreetHouseAddress("Ćwiartki 3");
-        customer.setStreetApartmentAddress("4");
-        customer.setPostalCode("59-003");
-        customer.setCity("Wrocław");
-        customer.setPhone("66666666");
-        customer.setEmail("ferderkkiepski@gmail.com");
-        customer.setComments("dej mnie to kurde");
+//        customer.setFirstName("Ferdek");
+//        customer.setLastName("Kiepski");
+//        customer.setCompanyName("Bezrobotny");
+//        customer.setCountrySelect("Poland");
+//        customer.setStreetHouseAddress("Ćwiartki 3");
+//        customer.setStreetApartmentAddress("4");
+//        customer.setPostalCode("59-003");
+//        customer.setCity("Wrocław");
+//        customer.setPhone("66666666");
+//        customer.setEmail("ferderkkiepski@gmail.com");
+//        customer.setComments("dej mnie to kurde");
 
         new HomePage(driver)
                 .openShopListPage()
@@ -47,17 +47,17 @@ public class CheckoutTest extends BaseTest{
     public void checkoutTestInFluid() {
 
         Customer customer = new Customer();
-        customer.setFirstName("Ferdek");
-        customer.setLastName("Kiepski");
-        customer.setCompanyName("Bezrobotny");
-        customer.setCountrySelect("Poland");
-        customer.setStreetHouseAddress("Ćwiartki 3");
-        customer.setStreetApartmentAddress("4");
-        customer.setPostalCode("59-003");
-        customer.setCity("Wrocław");
-        customer.setPhone("66666666");
-        customer.setEmail("ferderkkiepski@gmail.com");
-        customer.setComments("dej mnie to kurde");
+//        customer.setFirstName("Ferdek");
+//        customer.setLastName("Kiepski");
+//        customer.setCompanyName("Bezrobotny");
+//        customer.setCountrySelect("Poland");
+//        customer.setStreetHouseAddress("Ćwiartki 3");
+//        customer.setStreetApartmentAddress("4");
+//        customer.setPostalCode("59-003");
+//        customer.setCity("Wrocław");
+//        customer.setPhone("66666666");
+//        customer.setEmail("ferderkkiepski@gmail.com");
+//        customer.setComments("dej mnie to kurde");
 
         new HomePage(driver)
                 .openShopListPage()

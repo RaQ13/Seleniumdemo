@@ -4,17 +4,17 @@ import org.openqa.selenium.support.FindBy;
 
 public class Customer {
 
-    private String firstName;
-    private String lastName;
-    private String companyName;
-    private String countrySelect;
-    private String streetHouseAddress;
-    private String streetApartmentAddress;
-    private String city;
-    private String postalCode;
-    private String phone;
-    private String email;
-    private String comments;
+    private String firstName = "Ferdek";
+    private String lastName = "Kiepski";
+    private String companyName = "Bezrobotny";
+    private String countrySelect = "Poland";
+    private String streetHouseAddress = "Ćwiartki 3";
+    private String streetApartmentAddress = "4";
+    private String city = "59-003";
+    private String postalCode = "Wrocław";
+    private String phone = "66666666";
+    private String email = "ferderkkiepski@gmail.com";
+    private String comments = "dej mnie to kurde";
 
     public String getFirstName() {
         return firstName;
