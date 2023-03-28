@@ -3,6 +3,7 @@ package pl.seleniumdemo.tests;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pl.seleniumdemo.models.Customer;
 import pl.seleniumdemo.pages.HomePage;
 import pl.seleniumdemo.pages.ProductPage;
 
@@ -10,6 +11,19 @@ public class CheckoutTest extends BaseTest{
 
     @Test
     public void checkoutTest() {
+
+        Customer customer = new Customer();
+        customer.setFirstName("Ferdek");
+        customer.setLastName("Kiepski");
+        customer.setCompanyName("Bezrobotny");
+        customer.setCountrySelect("Poland");
+        customer.setStreetHouseAddress("Ćwiartki 3");
+        customer.setStreetApartmentAddress("4");
+        customer.setPostalCode("59-003");
+        customer.setCity("Wrocław");
+        customer.setPhone("66666666");
+        customer.setEmail("ferderkkiepski@gmail.com");
+        customer.setComments("dej mnie to kurde");
 
         new HomePage(driver)
                 .openShopListPage()
@@ -25,17 +39,32 @@ public class CheckoutTest extends BaseTest{
 
         new ProductPage(driver)
                 .viewCart()
-                .openOrderDetails();
+                .openOrderDetails()
+                .fillOrderDetails(customer);
     }
 
     @Test
     public void checkoutTestInFluid() {
+
+        Customer customer = new Customer();
+        customer.setFirstName("Ferdek");
+        customer.setLastName("Kiepski");
+        customer.setCompanyName("Bezrobotny");
+        customer.setCountrySelect("Poland");
+        customer.setStreetHouseAddress("Ćwiartki 3");
+        customer.setStreetApartmentAddress("4");
+        customer.setPostalCode("59-003");
+        customer.setCity("Wrocław");
+        customer.setPhone("66666666");
+        customer.setEmail("ferderkkiepski@gmail.com");
+        customer.setComments("dej mnie to kurde");
 
         new HomePage(driver)
                 .openShopListPage()
                 .openProduct("Java Selenium WebDriver")
                 .addProductToCart()
                 .viewCart()
-                .openOrderDetails();
+                .openOrderDetails()
+                .fillOrderDetails(customer);
     }
 }

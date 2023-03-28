@@ -18,7 +18,7 @@ public class OrderDetailsPage {
     @FindBy(id = "billing_company")
     private WebElement companyNameInput;
 
-    @FindBy(id = "select2-billing_country-container")
+    @FindBy(id = "billing_country")
     private WebElement countrySelect;
 
 //zamiast tego Select linia 59
@@ -67,7 +67,6 @@ public class OrderDetailsPage {
         phoneInput.sendKeys(customer.getPhone());
         emailinput.sendKeys(customer.getEmail());
         orderCommentsInput.sendKeys(customer.getComments());
-        placeOrderBtn.click();
 
         return new OrderDetailsCheckPage(driver);
     }
