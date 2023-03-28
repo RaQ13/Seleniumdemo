@@ -1,43 +1,43 @@
-package pl.selenitring;
+package pl.seleniumdemo.models;
 
 import org.openqa.selenium.support.FindBy;
 
 public class Customer {
 
-    private String firstNameInput;
-    private String lastNameInput;
-    private String companyNameInput;
+    private String firstName;
+    private String lastName;
+    private String companyName;
     private String countrySelect;
-    private String countrySelectMatch;
-    private String streetHouseAddressInput;
-    private String streetApartmentAddressInput;
-    private String countryInput;
-    private String postalCodeInput;
-    private String phoneInput;
-    private String emailinput;
+    private String streetHouseAddress;
+    private String streetApartmentAddress;
+    private String city;
+    private String postalCode;
+    private String phone;
+    private String email;
+    private String comments;
 
-    public String getFirstNameInput() {
-        return firstNameInput;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstNameInput(String firstNameInput) {
-        this.firstNameInput = firstNameInput;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastNameInput() {
-        return lastNameInput;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastNameInput(String lastNameInput) {
-        this.lastNameInput = lastNameInput;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getCompanyNameInput() {
-        return companyNameInput;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setCompanyNameInput(String companyNameInput) {
-        this.companyNameInput = companyNameInput;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     public String getCountrySelect() {
@@ -48,59 +48,59 @@ public class Customer {
         this.countrySelect = countrySelect;
     }
 
-    public String getCountrySelectMatch() {
-        return countrySelectMatch;
+    public String getStreetHouseAddress() {
+        return streetHouseAddress;
     }
 
-    public void setCountrySelectMatch(String countrySelectMatch) {
-        this.countrySelectMatch = countrySelectMatch;
+    public void setStreetHouseAddress(String streetHouseAddress) {
+        this.streetHouseAddress = streetHouseAddress;
     }
 
-    public String getStreetHouseAddressInput() {
-        return streetHouseAddressInput;
+    public String getStreetApartmentAddress() {
+        return streetApartmentAddress;
     }
 
-    public void setStreetHouseAddressInput(String streetHouseAddressInput) {
-        this.streetHouseAddressInput = streetHouseAddressInput;
+    public void setStreetApartmentAddress(String streetApartmentAddress) {
+        this.streetApartmentAddress = streetApartmentAddress;
     }
 
-    public String getStreetApartmentAddressInput() {
-        return streetApartmentAddressInput;
+    public String getCity() {
+        return city;
     }
 
-    public void setStreetApartmentAddressInput(String streetApartmentAddressInput) {
-        this.streetApartmentAddressInput = streetApartmentAddressInput;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getCountryInput() {
-        return countryInput;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setCountryInput(String countryInput) {
-        this.countryInput = countryInput;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
-    public String getPostalCodeInput() {
-        return postalCodeInput;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPostalCodeInput(String postalCodeInput) {
-        this.postalCodeInput = postalCodeInput;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getPhoneInput() {
-        return phoneInput;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhoneInput(String phoneInput) {
-        this.phoneInput = phoneInput;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getEmailinput() {
-        return emailinput;
+    public String getComments() {
+        return comments;
     }
 
-    public void setEmailinput(String emailinput) {
-        this.emailinput = emailinput;
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 }
