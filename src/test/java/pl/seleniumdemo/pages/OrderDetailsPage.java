@@ -55,7 +55,7 @@ public class OrderDetailsPage {
         this.driver = driver;
     }
 
-    public OrderDetailsCheckPage fillOrderDetails(Customer customer) {
+    public OrderDetailsPage fillOrderDetails(Customer customer) {
         firstNameInput.sendKeys(customer.getFirstName());
         lastNameInput.sendKeys(customer.getLastName());
         companyNameInput.sendKeys(customer.getCompanyName());
@@ -67,7 +67,11 @@ public class OrderDetailsPage {
         phoneInput.sendKeys(customer.getPhone());
         emailinput.sendKeys(customer.getEmail());
         orderCommentsInput.sendKeys(customer.getComments());
+        return this;
+    }
 
+    public OrderDetailsCheckPage placeOrder() {
+        placeOrderBtn.click();
         return new OrderDetailsCheckPage(driver);
     }
 }

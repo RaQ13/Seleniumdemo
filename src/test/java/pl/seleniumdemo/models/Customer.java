@@ -10,8 +10,8 @@ public class Customer {
     private String countrySelect = "Poland";
     private String streetHouseAddress = "Ćwiartki 3";
     private String streetApartmentAddress = "4";
-    private String city = "59-003";
-    private String postalCode = "Wrocław";
+    private String city = "Wrocław";
+    private String postalCode = "59-003";
     private String phone = "66666666";
     private String email = "ferderkkiepski@gmail.com";
     private String comments = "dej mnie to kurde";

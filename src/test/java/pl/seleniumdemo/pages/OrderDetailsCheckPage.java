@@ -10,12 +10,19 @@ public class OrderDetailsCheckPage {
     @FindBy(xpath = "//div[@class='woocommerce-order']//p")
     private WebElement thankYouParam;
 
+    @FindBy(xpath = "//td[contains(@class, 'product-name')]")
+    private WebElement prodcutName;
+
     public OrderDetailsCheckPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
     public WebElement getThankYouParam() {
         return thankYouParam;
+    }
+
+    public WebElement getProdcutName() {
+        return prodcutName;
     }
 
 }

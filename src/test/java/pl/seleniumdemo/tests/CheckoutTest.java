@@ -2,6 +2,7 @@ package pl.seleniumdemo.tests;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pl.seleniumdemo.models.Customer;
 import pl.seleniumdemo.pages.HomePage;
@@ -67,8 +68,10 @@ public class CheckoutTest extends BaseTest{
                 .addProductToCart()
                 .viewCart()
                 .openOrderDetails()
-                .fillOrderDetails(customer);
+                .fillOrderDetails(customer)
+                .placeOrder();
 
         Assert.assertEquals(orderDetailsCheckPage.getThankYouParam().getText(), "Thank you. Your order has been received.");
+        Assert.assertEquals(orderDetailsCheckPage.getProdcutName().getText(), "Java Selenium WebDriver × 1");
     }
 }
