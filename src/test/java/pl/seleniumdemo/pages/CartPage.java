@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pl.seleniumdemo.utils.SeleniumHelper;
 
 public class CartPage {
 
@@ -17,6 +18,7 @@ public class CartPage {
     }
 
     public OrderDetailsPage openOrderDetails() {
+        SeleniumHelper.waitForClickable(proceedToCheckoutBtn, driver);
         proceedToCheckoutBtn.click();
         return new OrderDetailsPage(driver);
     }

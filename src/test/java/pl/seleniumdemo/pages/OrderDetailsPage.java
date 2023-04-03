@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import pl.seleniumdemo.models.Customer;
+import pl.seleniumdemo.utils.SeleniumHelper;
 
 public class OrderDetailsPage {
 
@@ -71,6 +72,7 @@ public class OrderDetailsPage {
     }
 
     public OrderDetailsCheckPage placeOrder() {
+        SeleniumHelper.waitForClickable(placeOrderBtn, driver);
         placeOrderBtn.click();
         return new OrderDetailsCheckPage(driver);
     }

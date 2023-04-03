@@ -11,7 +11,8 @@ public class RegisterTest extends BaseTest{
     public void registerUserTest() {
         int random = (int) (Math.random() * 1000);
 
-        WebElement dashboardLink = new HomePage(driver).openMyaccountPage()
+        WebElement dashboardLink = new HomePage(driver)
+                .openMyaccountPage()
                 .registerUserValidData("tester" + random + "@test.pl", "tester12@test.pl")
                 .getDashboardLink();
 
