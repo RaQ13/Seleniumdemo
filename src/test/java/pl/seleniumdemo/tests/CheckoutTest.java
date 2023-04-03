@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pl.seleniumdemo.models.Customer;
 import pl.seleniumdemo.pages.HomePage;
+import pl.seleniumdemo.pages.OrderDetailsCheckPage;
 import pl.seleniumdemo.pages.ProductPage;
 
 public class CheckoutTest extends BaseTest{
@@ -59,12 +60,15 @@ public class CheckoutTest extends BaseTest{
 //        customer.setEmail("ferderkkiepski@gmail.com");
 //        customer.setComments("dej mnie to kurde");
 
-        new HomePage(driver)
+        OrderDetailsCheckPage orderDetailsCheckPage =
+                new HomePage(driver)
                 .openShopListPage()
                 .openProduct("Java Selenium WebDriver")
                 .addProductToCart()
                 .viewCart()
                 .openOrderDetails()
                 .fillOrderDetails(customer);
+
+        Assert.assertEquals(orderDetailsCheckPage.getThankYouParam().getText(), "Thank you. Your order has been received.");
     }
 }
